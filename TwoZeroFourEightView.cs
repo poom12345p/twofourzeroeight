@@ -23,6 +23,7 @@ namespace twozerofoureight
             controller = new TwoZeroFourEightController();
             controller.AddModel(model);
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
+  
         }
 
         public void Notify(Model m)
@@ -75,27 +76,113 @@ namespace twozerofoureight
             UpdateTile(lbl31,board[3, 1]);
             UpdateTile(lbl32,board[3, 2]);
             UpdateTile(lbl33,board[3, 3]);
+            scorelb.Text = Convert.ToString( ((TwoZeroFourEightModel) model).getscore() );
+
+
+
         }
 
         private void btnLeft_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
+            if (((TwoZeroFourEightModel)model).isOver(((TwoZeroFourEightModel)model).GetBoard()))
+            {
+                this.Hide();
+            }
         }
 
         private void btnRight_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.RIGHT);
+            if (((TwoZeroFourEightModel)model).isOver(((TwoZeroFourEightModel)model).GetBoard()))
+            {
+                this.Hide();
+            }
         }
-
         private void btnUp_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.UP);
+            if (((TwoZeroFourEightModel)model).isOver(((TwoZeroFourEightModel)model).GetBoard()))
+            {
+                this.Hide();
+            }
         }
 
         private void btnDown_Click(object sender, EventArgs e)
         {
+
             controller.ActionPerformed(TwoZeroFourEightController.DOWN);
+            if (((TwoZeroFourEightModel)model).isOver(((TwoZeroFourEightModel)model).GetBoard()))
+            {
+                this.Hide();
+            }
         }
 
+        /// <summary>
+        /// controll Action by key board
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TwoZeroFourEightView_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                case 'a':
+                case 'A':
+                    controller.ActionPerformed(TwoZeroFourEightController.LEFT);
+                    break;
+                      case 'd':
+                      case 'D':
+                          controller.ActionPerformed(TwoZeroFourEightController.RIGHT);
+                          break;
+                      case 'w':
+                      case 'W':
+                          controller.ActionPerformed(TwoZeroFourEightController.UP);
+                          break;
+                      case 's':
+                      case 'S':
+                          controller.ActionPerformed(TwoZeroFourEightController.DOWN);
+                          break;
+                default:break;
+                    
+            }
+            if (((TwoZeroFourEightModel)model).isOver(((TwoZeroFourEightModel) model).GetBoard()))
+            {
+               this.Hide();
+            }
+        }
+
+        private void btnLeft_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+            if (e.KeyCode == Keys.Right)
+            {
+                controller.ActionPerformed(TwoZeroFourEightController.RIGHT);
+            }
+            else if (e.KeyCode == Keys.Left)
+            {
+                controller.ActionPerformed(TwoZeroFourEightController.LEFT);
+            }
+            else if(e.KeyCode == Keys.Up)
+            {
+                controller.ActionPerformed(TwoZeroFourEightController.UP);
+            }
+            else if(e.KeyCode == Keys.Down)
+            {
+                controller.ActionPerformed(TwoZeroFourEightController.DOWN);
+            }
+
+        }
+
+
+        private void Focus_Enter(object sender, EventArgs e)
+        {
+           
+            Button button = (Button)sender;
+            button.Enabled = false;
+            //button.Enabled = true;
+        }
+
+        
     }
 }

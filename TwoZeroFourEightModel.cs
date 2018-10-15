@@ -11,17 +11,24 @@ namespace twozerofoureight
         protected int boardSize; // default is 4
         protected int[,] board;
         protected Random rand;
+        protected static int score = 0; 
 
         public TwoZeroFourEightModel() : this(4)
         {
             // default board size is 4 
         }
-
+        /// <summary>
+        /// return board 
+        /// </summary>
+        /// <returns></returns>
         public int[,] GetBoard()
         {
             return board;
         }
-
+        /// <summary>
+        /// create new board that  size*size
+        /// </summary>
+        /// <param name="size"></param>
         public TwoZeroFourEightModel(int size)
         {
             boardSize = size;
@@ -36,22 +43,30 @@ namespace twozerofoureight
             board = Random(board);
             NotifyAll();
         }
-
+        /// <summary>
+        /// add 2 block to board with random position
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns> board with new 2 block
+        /// </returns>
         private int[,] Random(int[,] input)
         {
-            while (true)
+            while (!isfull(input))///
             {
                 int x = rand.Next(boardSize);
                 int y = rand.Next(boardSize);
                 if (board[x, y] == 0)
                 {
                     board[x, y] = 2;
+                    score += 2;
                     break;
                 }
             }
             return input;
         }
-
+        /// <summary>
+        /// calculate new board by direction
+        /// </summary>
         public void PerformDown()
         {
             int[] buffer;
@@ -103,6 +118,10 @@ namespace twozerofoureight
             }
             board = Random(board);
             NotifyAll();
+            if(isOver(board))
+            {
+                gotoOver();
+            }
         }
 
         public void PerformUp()
@@ -155,6 +174,10 @@ namespace twozerofoureight
             }
             board = Random(board);
             NotifyAll();
+            if (isOver(board))
+            {
+                gotoOver();
+            }
         }
 
         public void PerformRight()
@@ -209,6 +232,10 @@ namespace twozerofoureight
             }
             board = Random(board);
             NotifyAll();
+            if (isOver(board))
+            {
+                gotoOver();
+            }
         }
 
         public void PerformLeft()
@@ -259,6 +286,90 @@ namespace twozerofoureight
             }
             board = Random(board);
             NotifyAll();
+            if (isOver(board))
+            {
+                gotoOver();
+            }
+        }
+    /// <summary>
+    /// check board is it fulll?
+    /// </summary>
+    /// <param name="board"></param>
+    /// <returns>bool true if no 0 in board
+    /// </returns>
+        bool isfull(int[,] board)
+        {
+            var range = Enumerable.Range(0, boardSize);
+            foreach (int i in range)
+            {
+                foreach (int j in range)
+                {
+                   if( board[i, j] ==0)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        /// <summary>
+        /// send score
+        /// </summary>
+        /// <returns></returns>
+        public  int getscore()
+        {
+            return score;
+        }
+
+        /// <summary>
+        /// check board 
+        /// is it full and can't move ?
+        /// </summary>
+        /// <param name="board"></param>
+        /// <returns>ture if board full and can't move else false
+        /// </returns>
+        public bool isOver(int[,] board)
+        {
+           
+            var range = Enumerable.Range(0, boardSize);
+            foreach (int i in range)
+            {
+                foreach (int j in range)
+                {
+                    int current = board[i, j];
+
+                    if (i-1 >= 0 && current == board[i-1, j])
+                    {
+                        return false;
+                    }
+                    else if (i + 1 <= boardSize-1 && current == board[i + 1, j])
+                    {
+                        return false;
+                    }
+                    if (j - 1 >= 0 && current == board[i, j-1])
+                    {
+                        return false;
+                    }
+                    if (j + 1 <= boardSize - 1 && current == board[i, j+1])
+                    {
+                        return false;
+                    }
+                }
+            }
+            if(!isfull(board))
+            {
+                return false;
+            }
+            return true;
+        }
+        /// <summary>
+        /// go to Over form
+        /// </summary>
+        void gotoOver()
+        {
+            GameOver GO = new GameOver(score);
+            GO.Show();
+            
         }
     }
 }

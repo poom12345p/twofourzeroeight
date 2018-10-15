@@ -48,11 +48,14 @@
             this.btnUp = new System.Windows.Forms.Button();
             this.btnRight = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
+            this.scorelb = new System.Windows.Forms.Label();
+            this.yourscore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl00
             // 
             this.lbl00.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl00.CausesValidation = false;
             this.lbl00.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl00.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl00.Location = new System.Drawing.Point(19, 11);
@@ -64,6 +67,7 @@
             // lbl01
             // 
             this.lbl01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl01.CausesValidation = false;
             this.lbl01.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl01.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl01.Location = new System.Drawing.Point(76, 9);
@@ -75,6 +79,7 @@
             // lbl02
             // 
             this.lbl02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl02.CausesValidation = false;
             this.lbl02.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl02.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl02.Location = new System.Drawing.Point(140, 11);
@@ -86,6 +91,7 @@
             // lbl03
             // 
             this.lbl03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl03.CausesValidation = false;
             this.lbl03.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl03.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl03.Location = new System.Drawing.Point(209, 9);
@@ -97,6 +103,7 @@
             // lbl13
             // 
             this.lbl13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl13.CausesValidation = false;
             this.lbl13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl13.Location = new System.Drawing.Point(209, 74);
@@ -108,6 +115,7 @@
             // lbl12
             // 
             this.lbl12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl12.CausesValidation = false;
             this.lbl12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl12.Location = new System.Drawing.Point(142, 74);
@@ -119,6 +127,7 @@
             // lbl11
             // 
             this.lbl11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl11.CausesValidation = false;
             this.lbl11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl11.Location = new System.Drawing.Point(76, 74);
@@ -130,6 +139,7 @@
             // lbl10
             // 
             this.lbl10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl10.CausesValidation = false;
             this.lbl10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl10.Location = new System.Drawing.Point(19, 74);
@@ -141,6 +151,7 @@
             // lbl23
             // 
             this.lbl23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl23.CausesValidation = false;
             this.lbl23.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl23.Location = new System.Drawing.Point(209, 138);
@@ -152,6 +163,7 @@
             // lbl22
             // 
             this.lbl22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl22.CausesValidation = false;
             this.lbl22.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl22.Location = new System.Drawing.Point(142, 138);
@@ -163,6 +175,7 @@
             // lbl21
             // 
             this.lbl21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl21.CausesValidation = false;
             this.lbl21.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl21.Location = new System.Drawing.Point(82, 138);
@@ -174,6 +187,7 @@
             // lbl20
             // 
             this.lbl20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl20.CausesValidation = false;
             this.lbl20.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl20.Location = new System.Drawing.Point(19, 138);
@@ -185,6 +199,7 @@
             // lbl33
             // 
             this.lbl33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl33.CausesValidation = false;
             this.lbl33.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl33.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl33.Location = new System.Drawing.Point(209, 201);
@@ -196,6 +211,7 @@
             // lbl32
             // 
             this.lbl32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl32.CausesValidation = false;
             this.lbl32.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl32.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl32.Location = new System.Drawing.Point(142, 201);
@@ -207,6 +223,7 @@
             // lbl31
             // 
             this.lbl31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl31.CausesValidation = false;
             this.lbl31.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl31.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl31.Location = new System.Drawing.Point(82, 201);
@@ -218,6 +235,7 @@
             // lbl30
             // 
             this.lbl30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl30.CausesValidation = false;
             this.lbl30.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl30.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl30.Location = new System.Drawing.Point(19, 201);
@@ -228,49 +246,97 @@
             // 
             // btnLeft
             // 
+            this.btnLeft.AutoSize = true;
+            this.btnLeft.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnLeft.Location = new System.Drawing.Point(85, 336);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(53, 45);
             this.btnLeft.TabIndex = 16;
+            this.btnLeft.TabStop = false;
             this.btnLeft.Text = "<";
             this.btnLeft.UseVisualStyleBackColor = true;
             this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
+            this.btnLeft.Enter += new System.EventHandler(this.Focus_Enter);
+            this.btnLeft.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLeft_KeyDown);
+            this.btnLeft.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoZeroFourEightView_KeyPress);
             // 
             // btnUp
             // 
+            this.btnUp.AutoSize = true;
+            this.btnUp.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnUp.Location = new System.Drawing.Point(140, 307);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(53, 45);
             this.btnUp.TabIndex = 17;
+            this.btnUp.TabStop = false;
             this.btnUp.Text = "^";
             this.btnUp.UseVisualStyleBackColor = true;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
+            this.btnUp.Enter += new System.EventHandler(this.Focus_Enter);
+            this.btnUp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLeft_KeyDown);
+            this.btnUp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoZeroFourEightView_KeyPress);
             // 
             // btnRight
             // 
+            this.btnRight.AutoSize = true;
+            this.btnRight.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnRight.Location = new System.Drawing.Point(195, 336);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(53, 45);
             this.btnRight.TabIndex = 18;
+            this.btnRight.TabStop = false;
             this.btnRight.Text = ">";
             this.btnRight.UseVisualStyleBackColor = true;
             this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
+            this.btnRight.Enter += new System.EventHandler(this.Focus_Enter);
+            this.btnRight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLeft_KeyDown);
+            this.btnRight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoZeroFourEightView_KeyPress);
             // 
             // btnDown
             // 
+            this.btnDown.AutoSize = true;
+            this.btnDown.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnDown.Location = new System.Drawing.Point(140, 371);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(53, 45);
             this.btnDown.TabIndex = 19;
+            this.btnDown.TabStop = false;
             this.btnDown.Text = "v";
             this.btnDown.UseVisualStyleBackColor = true;
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
+            this.btnDown.Enter += new System.EventHandler(this.Focus_Enter);
+            this.btnDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLeft_KeyDown);
+            this.btnDown.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoZeroFourEightView_KeyPress);
             // 
-            // Form1
+            // scorelb
+            // 
+            this.scorelb.AutoSize = true;
+            this.scorelb.CausesValidation = false;
+            this.scorelb.ForeColor = System.Drawing.Color.DarkRed;
+            this.scorelb.Location = new System.Drawing.Point(82, 273);
+            this.scorelb.Name = "scorelb";
+            this.scorelb.Size = new System.Drawing.Size(35, 13);
+            this.scorelb.TabIndex = 20;
+            this.scorelb.Text = "label1";
+            // 
+            // yourscore
+            // 
+            this.yourscore.AutoSize = true;
+            this.yourscore.CausesValidation = false;
+            this.yourscore.Location = new System.Drawing.Point(16, 273);
+            this.yourscore.Name = "yourscore";
+            this.yourscore.Size = new System.Drawing.Size(60, 13);
+            this.yourscore.TabIndex = 21;
+            this.yourscore.Text = "Your Score";
+            // 
+            // TwoZeroFourEightView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(344, 428);
+            this.Controls.Add(this.yourscore);
+            this.Controls.Add(this.scorelb);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnRight);
             this.Controls.Add(this.btnUp);
@@ -291,9 +357,13 @@
             this.Controls.Add(this.lbl02);
             this.Controls.Add(this.lbl01);
             this.Controls.Add(this.lbl00);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.KeyPreview = true;
+            this.Name = "TwoZeroFourEightView";
+            this.Text = "2048";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLeft_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoZeroFourEightView_KeyPress);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -319,6 +389,8 @@
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Label scorelb;
+        private System.Windows.Forms.Label yourscore;
     }
 }
 
