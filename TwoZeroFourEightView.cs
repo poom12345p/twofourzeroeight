@@ -23,6 +23,7 @@ namespace twozerofoureight
             controller = new TwoZeroFourEightController();
             controller.AddModel(model);
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
+            textBox1.Focus();
   
         }
 
@@ -172,17 +173,15 @@ namespace twozerofoureight
                 controller.ActionPerformed(TwoZeroFourEightController.DOWN);
             }
 
+            if (((TwoZeroFourEightModel)model).isOver(((TwoZeroFourEightModel)model).GetBoard()))
+            {
+                this.Hide();
+            }
         }
-
 
         private void Focus_Enter(object sender, EventArgs e)
         {
-           
-            Button button = (Button)sender;
-            button.Enabled = false;
-            //button.Enabled = true;
+            textBox1.Focus();
         }
-
-        
     }
 }

@@ -50,6 +50,7 @@
             this.btnDown = new System.Windows.Forms.Button();
             this.scorelb = new System.Windows.Forms.Label();
             this.yourscore = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbl00
@@ -329,12 +330,20 @@
             this.yourscore.TabIndex = 21;
             this.yourscore.Text = "Your Score";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(345, 384);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(10, 20);
+            this.textBox1.TabIndex = 22;
+            // 
             // TwoZeroFourEightView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(344, 428);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.yourscore);
             this.Controls.Add(this.scorelb);
             this.Controls.Add(this.btnDown);
@@ -391,6 +400,7 @@
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Label scorelb;
         private System.Windows.Forms.Label yourscore;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
